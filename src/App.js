@@ -1,30 +1,31 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
-import PrivateRoute from "./routing/PrivateRoute";
-import NotFound from "./components/NotFound";
-import Dashboard from "./components/Dashboard";
-import Meal from "./components/Meal";
-import setAuthToken from "./utils/setAuthToken";
-import store from "./store";
-import { loadUser } from "./actions/auth";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Navbar from "./components/layout/Navbar";
+// import Landing from "./components/layout/Landing";
+// import Login from "./components/auth/Login";
+// import Register from "./components/auth/Register";
+// import PrivateRoute from "./routing/PrivateRoute";
+// import NotFound from "./components/NotFound";
+// import Dashboard from "./components/Dashboard";
+// import Meal from "./components/Meal";
+// import setAuthToken from "./utils/setAuthToken";
+// import store from "./store";
+// import { loadUser } from "./actions/auth";
 
-if (localStorage.token) {
-	setAuthToken(localStorage.token);
-}
+// if (localStorage.token) {
+// 	setAuthToken(localStorage.token);
+// }
 
 function App() {
-	useEffect(() => {
-		store.dispatch(loadUser());
-	}, []);
+	// useEffect(() => {
+	// 	store.dispatch(loadUser());
+	// }, []);
 	return (
 		<>
 			<div className="App">
-				<Router>
+				<h1>amir</h1>
+				{/* <Router>
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Landing} />
@@ -34,7 +35,7 @@ function App() {
 						<Route exact path="/login" component={Login} />
 						<Route exact path="" component={NotFound} />
 					</Switch>
-				</Router>
+				</Router> */}
 			</div>
 		</>
 	);
