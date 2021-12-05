@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Meal-page{
+  margin-top:3.5rem;
+  height: 100%;
+	width:100%;
+	text-align: center;
+	justify-content: center;
+	background-color: #86c6be;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  align-items: center;
+}
+  
+  .search-btn {
+    height: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+    width: 20rem;
+  }
+  .search-btn:hover {
+    transform: scale(1.05);
+    background-color: #86c6be;
+  }
+  
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    background: linear-gradient(to right, rgb(0, 162, 255), white);
+    border-radius: 1rem;
+    box-shadow: black 0 0 1rem 0.2rem;
+    padding: 2rem;
+    font-weight: 600;
+    text-align: center;
+    gap:2rem;
+  }
+  
+  h1 {
+    color: black;
+  }
+h4{
+  color: aliceblue;
+  font-size:4rem;
+}
+
+  .cards{
+    border:solid 2px #86c6be;
+    border-radius:20%;
+    width:25rem;
+    height:30rem;
+    align-items: center;
+    background: linear-gradient(to right, #86c6be, white);
+    padding:5px;
+  }
+  .food-img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 1rem;
+  }
+  
+  .food-img:hover {
+    transform: scale(1.05);
+  }
+  .font {
+    color: royalblue;
+  }
+  .modal {
+    display: flex;
+    flex-direction: column;
+    margin-top:3.5rem;
+  }
+  .food-img-modal {
+    width: 15rem;
+    height: 10rem;
+    border-radius: 30%;
+    text-align: center;
+  }
+  .modlepage {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, royalblue, white);
+    text-align: center;
+  }
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 10%;
+    top: 0;
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    text-align:center;
+    border-radius:3%
+  }
+  .text{
+    transform: scale(1.05);
+    font-size: 1.2rem;
+  }
+  .textheader{
+    animation: color-change 4s infinite;
+    transform: scale(1.05);
+    font-size: 1.5rem;
+    padding:3px
+  }
+  @keyframes color-change {
+    0% { color: #405d3a; }
+    50% { color: #c80003; }
+    100% { color: #ff955f; }
+  }
+
+  .btn-modle{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.4em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    animation: color-change 4s infinite;
+  }
+  .btn-modle:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  .btn-modle:before,.btn-modle:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  .btn-modle:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-modle:hover:before,.btn-modle:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  
