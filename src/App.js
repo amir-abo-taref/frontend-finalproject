@@ -9,17 +9,18 @@ import PrivateRoute from "./routing/PrivateRoute";
 import NotFound from "./components/NotFound";
 import Dashboard from "./components/Dashboard";
 import Meal from "./components/Meal";
+import Dietserver from "./components/Deit";
 import setAuthToken from "./utils/setAuthToken";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 
-// if (localStorage.token) {
-// 	setAuthToken(localStorage.token);
-// }
+if (localStorage.token) {
+	setAuthToken(localStorage.token);
+}
 
 function App() {
 	useEffect(() => {
-		// store.dispatch(loadUser());
+		store.dispatch(loadUser());
 	}, []);
 	return (
 		<>
@@ -30,6 +31,7 @@ function App() {
 						<Route exact path="/" component={Landing} />
 						<PrivateRoute exact path="/dashboard" component={Dashboard} />
 						<PrivateRoute exact path="/Meal" component={Meal} />
+						<PrivateRoute exact path="/Diet" component={Dietserver} />
 						<Route exact path="/register" component={Register} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="" component={NotFound} />

@@ -97,10 +97,10 @@ const Meal = () => {
                         />
                       </div>
                       <div className="video-responsive">
-                       <iframe src={meal.info}
+                       {/* <iframe src={meal.info}
                       frameBorder="0" width="100%" height="1000" vspace="0" 
                       hspace="0" marginWidth="5" marginHeight="5" 
-                    scrolling="auto" allowtransparency="true" title="youtube" /> 
+                    scrolling="auto" allowtransparency="true" title="youtube" />  */}
                       </div>
                     </div>
                     <input
