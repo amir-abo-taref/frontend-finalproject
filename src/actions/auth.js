@@ -18,7 +18,7 @@ export const loadUser = () => async (dispatch) => {
 	}
 
 	try {
-		const res = await axios.get("http://localhost:5000/users/auth");
+		const res = await axios.get("https://backend-finalproject-amir.herokuapp.com/users/auth");
 
 		dispatch({
 			type: USER_LOADED,
@@ -45,7 +45,7 @@ export const register =
 
 		try {
 			const res = await axios.post(
-				"http://localhost:5000/users/",
+				"https://backend-finalproject-amir.herokuapp.com/users/",
 				body,
 				config
 			);
@@ -81,7 +81,7 @@ export const login = (email, password) => async (dispatch) => {
 
 	try {
 		const res = await axios.post(
-			"http://localhost:5000/users/auth",
+			"https://backend-finalproject-amir.herokuapp.com/users/auth",
 			body,
 			config
 		);
