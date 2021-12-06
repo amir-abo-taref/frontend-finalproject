@@ -43,7 +43,7 @@ const Meal = () => {
   
     const getData = async () => {
       const response = await axios.get(
-        `https://backend-finalproject-amir.herokuapp.com/meals`
+        `https://backend-finalproject-ameer.herokuapp.com//meals`
       );
       // console.log(response.data);
       setSearch(response.data);
