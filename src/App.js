@@ -10,6 +10,8 @@ import NotFound from "./components/NotFound";
 import Dashboard from "./components/Dashboard";
 import Meal from "./components/Meal";
 import Dietserver from "./components/Deit";
+import Memoryfood from "./components/MemoryGame";
+import RecipeApp from "./components/Recipe";
 import setAuthToken from "./utils/setAuthToken";
 import store from "./store";
 import { loadUser } from "./actions/auth";
@@ -32,6 +34,8 @@ function App() {
 						<PrivateRoute exact path="/dashboard" component={Dashboard} />
 						<PrivateRoute exact path="/Meal" component={Meal} />
 						<PrivateRoute exact path="/Diet" component={Dietserver} />
+						<PrivateRoute exact path="/MemoryGame" component={Memoryfood} />
+						<PrivateRoute exact path="/Recipe" component={RecipeApp} />
 						<Route exact path="/register" component={Register} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="" component={NotFound} />

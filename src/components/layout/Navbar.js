@@ -8,13 +8,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	const authLinks = (
 		<ul className="nav-links">
 			<li>
-			<Link to="/recipe-App">
+			<Link to="/MemoryGame">
 					<i className="fas fa-gamepad"></i>{" "}
 					<span className="hide-sm">Memory-Game</span>
 				</Link>
-			<Link to="/recipe-App">
+			<Link to="/recipe">
 					<i className="fas fa-archive"></i>{" "}
-					<span className="hide-sm">recipe-App</span>
+					<span className="hide-sm">recipe</span>
 				</Link>
 			<Link to="/Diet">
 					<i className="fas fa-apple-alt"></i>{" "}

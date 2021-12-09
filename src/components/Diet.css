@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   .Deit-page{
-    margin-top:3.5rem;
+    margin-top:19.4rem;
     height: 100%;
       width:100%;
       text-align: center;
@@ -13,6 +13,135 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-    align-items: center;
+      align-items: center;
    }
     
+.first-header{
+    width: 100%;
+    height: 100%;
+}
+ .dietcontainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 1rem;
+    text-align: center;
+    gap:0.5rem;
+    padding:0.2rem;
+  } 
+  
+  h1 {
+    color: black;
+  }
+h4{
+  color: aliceblue;
+  font-size:4rem;
+} */
+
+  .dietcards{
+    border-radius:20%;
+    align-items: center;
+    padding:3px;
+  } 
+  .dietfood-img {
+    width: 28rem;
+    height:28rem;
+    border-radius: 1rem;
+  }
+
+  .small-dietfood-img{
+    width: 12rem;
+    height:9rem;
+    border-radius: 1rem;
+  }
+  
+  .food-img:hover {
+    transform: scale(1.05);
+  }
+  .font {
+    color: royalblue;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 28rem;
+    height:28rem;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    background-color:#a6c64c;
+    border-radius: 1rem;
+  }
+  .smallpiccontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap:20px; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left:20px;
+
+  }
+  .smallpiccontainer:hover{
+    transform: scale(1.05);
+  }
+  .good{
+    color:green;
+    font-size:3rem
+  }
+  .madiom{
+    color:orange;
+    font-size:3rem
+  }
+  .bad{
+    color:red;
+    font-size:3rem
+  }
+  .headertextwigth{
+    font-size:2rem;
+    color:black;
+  }
+  .dietbtn{
+border-radius:10px;
+  }
+  .dietbtn:hover{
+    transform: scale(1.05);
+  }
+  .textbmi{
+    width:14rem;
+    height:3rem;
+    font-size:2rem;
+  }
