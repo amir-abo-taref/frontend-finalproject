@@ -62,7 +62,7 @@ const resetTurn = ()=>{
     return (
 <div className="page-game">
     <div className="gameheader">
-    <h5>Memory Food Game - your Turns ({turns}) </h5>
+    <h5>Food Memory Game - your Turns ({turns}) </h5>
 <input onClick={shuffleCards} value="start New Game" type="button" className="btngame"/>
 </div>
 <div className="foodmemoryapp">

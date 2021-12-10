@@ -10,6 +10,5 @@ export default function SingleCard({card ,handleChoice,flipped}) {
 <img className="back" src={"/img/foodingredients.jpg"} onClick={handleClick} alt="card back" />
 </div>
 </div>  
-       
     )
 }
