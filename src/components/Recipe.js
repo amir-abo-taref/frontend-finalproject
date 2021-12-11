@@ -15,46 +15,56 @@ const RecipeApp = () => {
         const inputHandler = (e)=>{
             setRecipe({
             ...recipe,
-            [e.target.id]:e.target.value,
+            [e.target.name]:e.target.value,
         })
         }
+
+        // useEffect(() => {
+        //     const postData = async () => {
+        //     axios.post('https://backend-finalproject-ameer.herokuapp.com/recipe', recipe)
+        //         .then(response => setRecipe(response.data));
+        //     }
+        
+        // // empty dependency array means this effect will only run once (like componentDidMount in classes)
+        // }, []);
 
         useEffect(() => {
             const getData = async () => {
                 await axios.get("https://backend-finalproject-ameer.herokuapp.com/recipe")
                     .then(res => {
                         setMeal(res.data);
-                        setRecipe(res.data);
                     });
             };
             getData();
         }, []);
-        const postData = async() => {
+
+        const postdata = async () => {
             await axios.post("https://backend-finalproject-ameer.herokuapp.com/recipe",recipe)
                 .then(res => {
-                    setMeal([...recipe,res.data]);
                     setRecipe(res.data);
+                    setMeal([...meal,res.data])
                 });
         };
+     
 
         return (
             <div className="recipe-page">
                 <div className="input-recipe">
                     <div className="recipe-header1">
 <div className="recipe-text"> your food name</div>
-<input className="recipe-inputbtn" type="text" min="0" name="name" id="id" value={recipe.name} onChange={inputHandler} placeholder="Food name" />
+<input className="recipe-inputbtn" type="text"  name="name" value={recipe.name} onChange={inputHandler} placeholder="Food name" />
 <div className="recipe-text">your food image</div>
-<input className="recipe-inputbtn" type="url" min="0" name="img" id="id" value={recipe.image} onChange={inputHandler} placeholder="Food image-(url)" />
+<input className="recipe-inputbtn" type="url" name="image" value={recipe.image} onChange={inputHandler} placeholder="Food image-(url)" />
 <div className="recipe-text">your food caloriot</div>
-<input className="recipe-inputbtn" type="number" min="0" name="caloriot" id="id" value={recipe.caloriot} onChange={inputHandler} placeholder="caloriot" />
+<input className="recipe-inputbtn" type="number"  name="caloriot" value={recipe.caloriot} onChange={inputHandler} placeholder="caloriot" />
 <div className="recipe-text">time to make</div>
-<input className="recipe-inputbtn" type="number" min="0" name="time" id="id" value={recipe.time} onChange={inputHandler} placeholder="time" />
+<input className="recipe-inputbtn" type="number"  name="time" value={recipe.time} onChange={inputHandler} placeholder="time" />
 <div className="recipe-text">click here to add your recipe</div>
-<input className="recipe-btn" type="button" name="add food" id="id" value="add Your Food" onClick={postData}  />
+<input className="recipe-btn" type="submit" name="add food" value="add Your Food" onClick={postdata}  />
 </div>
 <div className="recipe-header2">
 <div className="recipe-text">Tap here how to make your food </div>
-<textarea className="descriptions" value={recipe.info} id="id" name="descriptions" rows="6" cols="26" onChange={inputHandler}  placeholder="click here to add your ingredients "/>
+<textarea className="descriptions" value={recipe.info} name="info" rows="6" cols="26" onChange={inputHandler}  placeholder="click here to add your ingredients "/>
 </div>
 </div>
       <div className="allrecipecards">
