@@ -1,58 +1,137 @@
 .recipe-page{
-margin-top:3.5rem
+margin-top:3.5rem;
+width: 100vw;
+height: 100vh;
+background-color: #86c6be;
+background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .special-container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background: linear-gradient(to right, rgb(193, 197, 156), rgb(24, 176, 187));
-  }
-  .header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .description {
-    height: 10rem;
-    background: linear-gradient(to right, rgb(193, 197, 156), rgb(24, 176, 187));
-    font-size:2.5rem;
-  
-  }
-  .headerleftbtn {
-    display: grid;
-  }
-  .specialreturnname{
-    font-size: 2rem;
-  }
-  .specialreturnimage{
-    width:40rem;
-    height:20rem;
-    border-radius:1rem;
-  
-  }
-  .specialreturndesc{
-  width: 38rem;
-  font-size: 1.2rem;
-  }
-  .leftbtn{
-    font-size:2rem;
-    background: linear-gradient(to right, rgb(193, 197, 156), rgb(24, 176, 187));
-    color:antiquewhite;
-    
-  }
-  .leftbtn:hover{
-    background-color: greenyellow;
-  }
-  .dele{
-    background-color:orangered;
-    font-size:2rem;
-    border-radius:1rem;
-  }
-  .dele:hover{
-    background-color:red;
-  }
+.allrecipecards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  text-align: center;
+  padding: 20px 40px;
+  position: absolute;
+  background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.recipefood-img{
+  background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  width:20rem;
+  height:15rem;
+  border-radius:60%;
+}
+.recipefood-img:hover{
+  transform: scale(1.05);
+}
+
+.recipeheader{
+font-size:2.5rem;
+animation: color-change 4s infinite;
+}
+.infoingtext{
+  font-size:3rem;
+animation: color-change 4s infinite;
+}
+
+.recipeinfo{
+  color: black;
+  font-size:2rem;
+  width:26rem;
+
+}
+.recipecards{
+  border:solid 2px #86c6be;
+  border-radius:25%;
+  width:25rem;
+  height:36rem;
+  background-image: url('https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+	background-repeat: no-repeat;
+	background-size: cover;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: url('https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  border-radius:25%;
+}
+.recipecards:hover .overlay {
+  opacity: 1;
+}
+
+.recipetextinfo {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width:22rem;
+  font-size:1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.recipetext{
+  font-size:2rem;
+}
+/* header page */
+.input-recipe{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  text-align: center;
+	background-size: cover;
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+}
+.descriptions{
+ background-color: white;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+ font-size:3rem;
+ border-radius: 30px;
+ background-image: url("https://cdn.pixabay.com/photo/2013/07/13/12/15/plate-159469_960_720.png");
+}
+
+
+.recipe-text{
+ font-size:2rem ;
+ color:black;
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ 
+}
+.recipe-inputbtn{
+  font-size:1.5rem 
+}
+.recipe-btn{
+  animation: color-change 4s infinite;
+  font-size:2rem;
+  border-radius: 10px;
+  color:black;
+  background-image: linear-gradient(to left top, #bea3b2, #ab91a7, #96819d, #7f7193, #656389, #5b6a94, #4d729e, #387aa5, #2d9ac1, #27bad7, #39dbe7, #5ffbf1);
+}
+.recipe-btn:hover{
+  transform: scale(1.05);
+}
+
+

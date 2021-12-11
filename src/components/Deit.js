@@ -63,7 +63,6 @@ const Dietserver = () => {
             <div className="dietcontainer">
             {diet.map((e) => {
                 return (
-                    
               <div className="dietcards" key={e._id}>
 <div class="flip-card">
   <div class="flip-card-inner">

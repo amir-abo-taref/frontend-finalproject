@@ -145,3 +145,6 @@ border-radius:10px;
     height:3rem;
     font-size:2rem;
   }
+  .container{
+    background-image: url('https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  }
