@@ -133,5 +133,12 @@ animation: color-change 4s infinite;
 .recipe-btn:hover{
   transform: scale(1.05);
 }
+.recipetextbutton{
+  font-size:2rem ;
+  color:orangered;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top:8rem;
+  margin-left:-3rem;
+}
 
 
