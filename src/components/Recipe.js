@@ -39,12 +39,12 @@ const RecipeApp = ({ auth: { user } }) => {
         };
 
         const deletedata = async (id) => {
-            await axios.delete(`https://backend-finalproject-ameer.herokuapp.com/recipe/${id}`,{method: 'delete'})
-            await setMeal(meal.filter(meal => meal._id !== id))
+            console.log(id);
+            await axios.delete(`https://backend-finalproject-ameer.herokuapp.com/recipe/`+id,{method: 'delete'})
                 .then(res => {
                     setMeal([...meal,res.data])
                 });
-                
+                setMeal(meal.filter(meal => meal._id !== id))
         };
 
 
@@ -107,7 +107,7 @@ const RecipeApp = ({ auth: { user } }) => {
           <div className="recipetextbutton">Made by:{e.username}</div>
           <div className="overlay">
           <div className="recipetextinfo"><div className="infoingtext">Ingredients</div>({e.info})</div>
-          <input className="delete" type="button"  value="X" onClick={deletedata}  />
+          <input className="delete" type="button"  value="x" onClick={()=>{deletedata(e._id)}}  />
 
           </div>
           </div>
