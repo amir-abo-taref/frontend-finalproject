@@ -137,8 +137,30 @@ animation: color-change 4s infinite;
   font-size:2rem ;
   color:orangered;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin-top:8rem;
+  margin-top:1rem;
   margin-left:-3rem;
+}
+.recipelikes{
+  font-size:2rem ;
+  color:orangered;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top:4rem;
+  margin-left:-3rem;
+}
+
+
+.delete{
+  background-color: red;
+  color:white;
+  font-size: 2rem;
+  border-radius:40%;
+  margin-top:30rem;
+  margin-left: 15rem;
+  width: 3rem;
+}
+.delete:hover{
+  transform: scale(1.05);
+  background-color: goldenrod;
 }
 
 

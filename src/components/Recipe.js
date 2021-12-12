@@ -11,23 +11,14 @@ const RecipeApp = ({ auth: { user } }) => {
         caloriot:'',
         time:'',
         info:'',
+        likes:"0"
         })
-
         const inputHandler = (e)=>{
             setRecipe({
             ...recipe,
             [e.target.name]:e.target.value,
         })
         }
-
-        // useEffect(() => {
-        //     const postData = async () => {
-        //     axios.post('https://backend-finalproject-ameer.herokuapp.com/recipe', recipe)
-        //         .then(response => setRecipe(response.data));
-        //     }
-        
-        // // empty dependency array means this effect will only run once (like componentDidMount in classes)
-        // }, []);
 
         useEffect(() => {
             const getData = async () => {
@@ -46,7 +37,39 @@ const RecipeApp = ({ auth: { user } }) => {
                     setMeal([...meal,res.data])
                 });
         };
-     
+
+        const deletedata = async (id) => {
+            await axios.delete(`https://backend-finalproject-ameer.herokuapp.com/recipe/${id}`,{method: 'delete'})
+            await setMeal(meal.filter(meal => meal._id !== id))
+                .then(res => {
+                    setMeal([...meal,res.data])
+                });
+                
+        };
+
+
+        // const Deletehandler = async (_id) => {
+        //     const Delete = await axios.delete(
+        //       `https://backend-finalproject-ameer.herokuapp.com/recipe/:${_id}`
+        //     );
+        //     if (Delete.status === 200) {
+        //       const datalist = meal;
+        //       let deletedfood = datalist.filter((meal) => {
+        //         return meal._id !== _id;
+        //       });
+        //       setMeal(deletedfood);
+        //     }
+        //   };
+
+        // const deleteRecipe = async (_id) => {
+        //     await fetch(`https://backend-finalproject-ameer.herokuapp.com/recipe/${_id}`, {
+        //       method: "DELETE",
+        //     })
+        
+        //     await setMeal(meal.filter(meal => meal._id !== _id))
+        //   }
+        
+
 
         return (
             <div className="recipe-page">
@@ -61,7 +84,7 @@ const RecipeApp = ({ auth: { user } }) => {
 <div className="recipe-text">your food caloriot</div>
 <input className="recipe-inputbtn"  type="number"  name="caloriot" value={recipe.caloriot} onChange={inputHandler} placeholder="caloriot" />
 <div className="recipe-text">time to make</div>
-<input className="recipe-inputbtn"   type="number"  name="time" value={recipe.time} onChange={inputHandler} placeholder="time" />
+<input className="recipe-inputbtn"  type="number"  name="time" value={recipe.time} onChange={inputHandler} placeholder="time" />
 <div className="recipe-text">click here to add your recipe</div>
 <input className="recipe-btn" type="submit" name="add food" value="add Your Food" onClick={postdata}  />
 <h6 className="madebyuser" >Made by, {user&&user.name}</h6>
@@ -80,9 +103,12 @@ const RecipeApp = ({ auth: { user } }) => {
           <div className="recipeheader" >{e.name}</div>
           <div className="recipetext">calories:({e.caloriot})grams</div>
           <div className="recipetext">Time:({e.time})mins</div>
+          <div className="recipelikes">likes:({e.likes}<i class="far fa-heart"></i>)</div>
           <div className="recipetextbutton">Made by:{e.username}</div>
           <div className="overlay">
-          <div className="recipetextinfo"><div className="infoingtext">Ingredients</div>({e.info})</div> 
+          <div className="recipetextinfo"><div className="infoingtext">Ingredients</div>({e.info})</div>
+          <input className="delete" type="button"  value="X" onClick={deletedata}  />
+
           </div>
           </div>
 </div>
